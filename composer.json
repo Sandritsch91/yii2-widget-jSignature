@@ -9,10 +9,12 @@
         "yii2"
     ],
     "license": "MIT",
-    "authors": [{
-        "name": "Sandritsch91",
-        "email": "sandritsch91@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Sandritsch91",
+            "email": "sandritsch91@gmail.com"
+        }
+    ],
     "support": {
         "source": "https://github.com/Sandritsch91/yii2-widget-jSignature",
         "issues": "https://github.com/Sandritsch91/yii2-widget-jSignature/issues"
