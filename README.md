@@ -31,6 +31,8 @@ If you need to load a signature again, use one of these formats.
 
 ## Usage
 
+### Widget
+
 with a model:
 
 ```php
@@ -80,7 +82,7 @@ echo JSignature::widget([
 ]);
 ```
 
-## Widget options
+### Widget options
 
 - format: The format of the signature. Defaults to svgbase64
     - default
@@ -93,3 +95,13 @@ echo JSignature::widget([
 - clientEvents: The client events to be attached to the textarea. Defaults to []
     - change: Triggered after each stroke
 - wrapperOptions: The options for the wrapper div. Defaults to []
+
+### Helper
+
+User the ```sandritsch91\yii2\jSignature\JSignatureHelper``` to convert the signature to a different format.
+
+Possible conversions are:
+
+- base30 to native
+- native to svg
+- base 30 to svg
