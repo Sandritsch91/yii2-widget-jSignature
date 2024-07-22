@@ -18,7 +18,7 @@ class JSignatureHelper
     const SVG_PREFIX = 'data:image/svg+xml;base64,';
 
     /**
-     * Convert a base30 string to a native format.
+     * Convert a base30 string to a native format
      * @param string $base30
      * @return array
      */
@@ -31,7 +31,6 @@ class JSignatureHelper
     /**
      * Convert native format to svg
      * @param array $native
-     * is useful if you want to display the svg in an img tag.
      * @return string
      */
     public static function nativeToSvg(array $native): string
@@ -98,7 +97,7 @@ class JSignatureHelper
     }
 
     /**
-     * Load the required classes.
+     * Load the required classes
      * @return void
      */
     protected static function loadClasses(): void
