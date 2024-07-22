@@ -121,7 +121,7 @@ JS;
 
         // pass signature to hidden input
         $js = <<<JS
-function handleSignature() {
+jQuery("#$wrapperId").on('change', function () {
     var data = window.$var.jSignature('getData', '$this->format');
     switch ('$this->format') {
         case 'default':
@@ -139,8 +139,7 @@ function handleSignature() {
             throw 'Unknown format: $this->format';
     }
     jQuery('#$id').val(data);
-}
-jQuery("#$wrapperId").on('change', handleSignature);
+});
 JS;
         $this->view->registerJs($js);
 
