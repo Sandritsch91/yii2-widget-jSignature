@@ -99,24 +99,18 @@ class JSignature extends InputWidget
 
         // init js plugin
         $var = Inflector::variablize($wrapperId);
+
         $js = <<<JS
 window.$var = jQuery("#$wrapperId");
 window.$var.jSignature();
-var {$var}_value = '$this->value';
-if ({$var}_value !== '') {
-    var {$var}_format = '';
-    switch ('$this->format') {
-        case 'native':
-            window.$var.jSignature('setData', JSON.parse({$var}_value), '$this->format');
-            break;
-        case 'base30':
-            window.$var.jSignature('setData', 'data:image/jsignature;base30,' + {$var}_value);
-            break;
-       default:
-           throw 'format not supported: $this->format'
-    }
-}
 JS;
+        if ($this->value != '') {
+            $js .= match ($this->format) {
+                'native' => "window.$var.jSignature('setData', JSON.parse('{$this->value}'), 'native');",
+                'base30' => "window.$var.jSignature('setData', 'data:image/jsignature;base30,{$this->value}');",
+                default => ""
+            };
+        }
         $this->view->registerJs($js);
 
         // pass signature to hidden input
