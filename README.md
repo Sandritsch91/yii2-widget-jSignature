@@ -104,4 +104,6 @@ Possible conversions are:
 
 - base30 to native
 - native to svg
-- base 30 to svg
+- base30 to svg
+- native to image
+- base30 to image
