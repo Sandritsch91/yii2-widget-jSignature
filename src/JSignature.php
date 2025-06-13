@@ -36,6 +36,12 @@ class JSignature extends InputWidget
     public string|Html $htmlClass = 'yii\helpers\Html';
 
     /**
+     * Options for the jSignature plugin.
+     * @var array
+     */
+    public array $clientOptions = [];
+
+    /**
      * @var array the event handlers for the underlying JS plugin.
      */
     public array $clientEvents = [];
@@ -100,9 +106,11 @@ class JSignature extends InputWidget
         // init js plugin
         $var = Inflector::variablize($wrapperId);
 
+        $clientOptions = Json::encode($this->clientOptions);
+
         $js = <<<JS
 window.$var = jQuery("#$wrapperId");
-window.$var.jSignature();
+window.$var.jSignature($clientOptions);
 JS;
         if ($this->value != '') {
             $js .= match ($this->format) {

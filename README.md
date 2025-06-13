@@ -43,6 +43,7 @@ echo JSignature::widget([
     'attribute' => 'signature',                 // The attribute to be used in the form
     'format' => 'svgbase64',                    // The format of the signature. Defaults to svgbase64
     'htmlClass' => yii\helpers\Html::class,     // Optional. The class used to generate the form field
+    'clientOptions' => [],                      // Optional. The options for the jSignature plugin
     'clientEvents' => [                         // Optional. Pass the client events to be attached to the textarea
         'change' => 'function() { console.log("changed"); }'
     ],

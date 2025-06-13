@@ -19,6 +19,12 @@
         "source": "https://github.com/Sandritsch91/yii2-widget-jSignature",
         "issues": "https://github.com/Sandritsch91/yii2-widget-jSignature/issues"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "minimum-stability": "stable",
     "require": {
         "php": ">=8.0",
