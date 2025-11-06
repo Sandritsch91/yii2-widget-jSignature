@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class JSignatureAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower-asset/jsignature/libs';
+    public $sourcePath = '@vendor/npm-asset/jsignature/libs';
 
     public $js = [
         'jSignature.min.js'
