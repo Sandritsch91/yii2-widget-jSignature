@@ -102,7 +102,7 @@ class JSignatureHelper
      */
     protected static function loadClasses(): void
     {
-        $alias = '@bower/jsignature/extras/SignatureDataConversion_PHP/core/';
+        $alias = '@npm/jsignature/extras/SignatureDataConversion_PHP/core/';
         require_once \Yii::getAlias("$alias/jSignature_Tools_Base30.php");
         require_once \Yii::getAlias("$alias/jSignature_Tools_SVG.php");
     }
